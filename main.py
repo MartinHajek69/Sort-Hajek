@@ -57,19 +57,20 @@ selection_array = [48, 95, 21, 3, 35, 66, 69, 41, 33, 99]
 print("Selection sort:", selection_sort(selection_array))
 # funkce pro Insertion sort
 def insertion_sort(array):
-        # prochazi seznam od druheho prvku
+        # prochazi pole od druheho prvku
     for i in range(1, len(array)):
         key = array[i]
         j = i - 1
-        # Posouváme prvky, které jsou větší nez key o jedno misto doprava
+        # posouva prvky ktere jsou vetsi nez key o jedno misto doprava
         while j >= 0 and key < array[j]:
             array[j + 1] = array[j]
             j -= 1
+            # vlozi aktuslni prvek na spravne misto
         array[j + 1] = key
         print(f"Po {i} pokusu: {array}")
     return array
 
-# Testování Insertion sort
+# testovani Insertion sort
 insertion_array = [48, 95, 21, 3, 35, 66, 69, 41, 33, 99]
 print("Insertion sort:", insertion_sort(insertion_array))
 
